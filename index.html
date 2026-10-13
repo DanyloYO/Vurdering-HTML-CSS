@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git og GitHub cheat sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app" class="ark" v-cloak>
+
+    <header>
+        <div>
+            <h1>Git og GitHub cheat sheet</h1>
+            <p>Trygg arbeidsflyt med Git Bash, VS Code og GitHub</p>
+        </div>
+        <input type="search" v-model="sok" placeholder="Søk, f.eks. branch">
+    </header>
+
+    <div class="flyt">PULL → JOBB → COMMIT → PUSH</div>
+
+    <main class="kolonner">
+        <section v-for="s in filtrert" class="boks" :class="s.farge">
+            <h2>{{ s.tittel }}</h2>
+
+            <p v-for="k in s.kommandoer"><code>{{ k }}</code></p>
+
+            <ul>
+                <li v-for="t in s.tips">{{ t }}</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <b>Tre regler:</b> Pull før du begynner. Commit og push før du avslutter.
+        Noe galt? Kjør <code>git status</code> før du gjør noe annet.
+    </footer>
+</div>
+
+<script src="https://unpkg.com/vue@3.5.13/dist/vue.global.prod.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+:root {
+    --bla: #3b6ea8;
+    --gronn: #2f8a57;
+    --oransje: #d0821a;
+    --rod: #c0392b;
+    --kode: #2e2e2e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #dfe3e6;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #222;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.ark {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    padding: 10mm;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 3px solid #222;
+    padding-bottom: 6px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 2px 0 0;
+    color: #666;
+}
+
+header input {
+    width: 180px;
+    padding: 4px 8px;
+}
+
+.flyt {
+    margin: 8px 0;
+    padding: 6px;
+    background: #e8f0fe;
+    border-left: 5px solid var(--bla);
+    color: var(--bla);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.kolonner {
+    column-count: 2;
+    column-gap: 10px;
+}
+
+.boks {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    padding: 6px 8px;
+    background: #fafafa;
+    border: 1px solid #ccc;
+    border-top: 4px solid var(--farge);
+}
+
+.bla {
+    --farge: var(--bla);
+}
+
+.gronn {
+    --farge: var(--gronn);
+}
+
+.oransje {
+    --farge: var(--oransje);
+}
+
+.rod {
+    --farge: var(--rod);
+}
+
+.boks h2 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    color: var(--farge);
+}
+
+.boks p {
+    margin: 3px 0;
+    line-height: 1.35;
+}
+
+code {
+    font-family: Consolas, monospace;
+    background: var(--kode);
+    color: white;
+    padding: 1px 5px;
+    border-radius: 2px;
+}
+
+.rod code {
+    background: var(--rod);
+}
+
+.boks ul {
+    margin: 4px 0 0;
+    padding-left: 16px;
+}
+
+.boks li {
+    margin: 2px 0;
+    line-height: 1.35;
+}
+
+footer {
+    padding: 7px 10px;
+    background: #fff6d8;
+    border-left: 5px solid var(--oransje);
+}
+
+@media (max-width: 800px) {
+    .ark {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    header input {
+        width: 100%;
+    }
+
+    .kolonner {
+        column-count: 1;
+    }
+}
